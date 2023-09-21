@@ -31,7 +31,11 @@
                            :openai identity
                            :azure azure/patch-params)
 
-          patched-params (patch-parms-fn params)]
+          patched-params (patch-parms-fn params)
 
-      (-> (martian/response-for m operation (assoc patched-params ::options options))
+          patched-params (if (seq options)
+                           (assoc patched-params ::options options)
+                           patched-params)]
+
+      (-> (martian/response-for m operation patched-params)
           :body))))
