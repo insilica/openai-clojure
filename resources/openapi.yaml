@@ -8488,7 +8488,7 @@ components:
 
             Use "fine-tune" for [Fine-tuning](/docs/api-reference/fine-tuning) and "assistants" for [Assistants](/docs/api-reference/assistants) and [Messages](/docs/api-reference/messages). This allows us to validate the format of the uploaded file is correct for fine-tuning.
           type: string
-          enum: ["fine-tune", "assistants"]
+          enum: ["fine-tune", "assistants", "batch"]
       required:
         - file
         - purpose
