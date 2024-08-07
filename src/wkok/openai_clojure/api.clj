@@ -856,3 +856,47 @@
   ([params options]
    (let [opts (assoc-in options [:openai-beta] ASSISTANTS_HTTP_HEADER_STR)]
      (core/response-for :create-thread-and-run params opts))))
+
+(defn create-batch
+  "Creates and executes a batch from an uploaded file of requests.
+
+
+  [OpenAI documentation](https://platform.openai.com/docs/api-reference/batch/create)
+  "
+  ([params]
+   (create-batch params nil))
+  ([params options]
+   (core/response-for :create-batch params options)))
+
+(defn retrieve-batch
+  "Retrieves a batch.
+
+
+  [OpenAI documentation](https://platform.openai.com/docs/api-reference/batch/retrieve)
+  "
+  ([params]
+   (retrieve-batch params nil))
+  ([params options]
+   (core/response-for :retrieve-batch params options)))
+
+(defn cancel-batch
+  "Cancel a batch.
+
+
+  [OpenAI documentation](https://platform.openai.com/docs/api-reference/batch/cancel)
+  "
+  ([params]
+   (cancel-batch params nil))
+  ([params options]
+   (core/response-for :cancel-batch params options)))
+
+(defn list-batches
+  "List your organization's batches.
+
+
+  [OpenAI documentation](https://platform.openai.com/docs/api-reference/batch/list)
+  "
+  ([params]
+   (list-batches params nil))
+  ([params options]
+   (core/response-for :list-batches params options)))
