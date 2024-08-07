@@ -6678,12 +6678,7 @@ paths:
                                     type: string
                                     enum: ["24h"]
                                     description: The time frame within which the batch should be processed. Currently only `24h` is supported.
-                                metadata:
-                                    type: object
-                                    additionalProperties:
-                                        type: string
-                                    description: Optional custom metadata for the batch.
-                                    nullable: true
+                                metadata: {}
             responses:
                 "200":
                     description: Batch created successfully.
